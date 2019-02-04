@@ -1,0 +1,16 @@
+<SPAN ID="copytext" STYLE="height:150;width:162;background-color:pink">
+Copy Text
+</SPAN>
+ <TEXTAREA ID="holdtext" STYLE="display:none;">
+</TEXTAREA>
+ <BUTTON onClick="ClipBoard();">Copy to Clipboard</BUTTON>
+
+ <script>
+    var bccList = 'emails here';
+    function SetList()
+    {
+
+
+    window.clipboardData.setData('text', bccList);
+    }
+    </script>

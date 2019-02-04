@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+{% block body %}
+<title>{{one_tag.title}}</title>
+			<section class="blog-area section-gap">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-md-8 pb-30 header-text">
+							<p>
+								{{one_tag.tags}} | {{one_tag.user}} | {{one_tag.date}}
+							</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="single-blog col-lg-15 col-md-15">
+							{% if one_tag.img %}
+										<img class="f-img img-fluid mx-auto note-img" src="{{one_tag.img.url}}" alt="">
+										<br>
+							{% endif %}
+							<br>
+							<div class="form-group shadow-textarea">
+									<label for="exampleFormControlTextarea6">Shadow and placeholder</label>
+									<textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="10" >
+										{{one_tag.content}}
+									</textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+{% endblock %}
